@@ -7,11 +7,11 @@ lint:
 	$(PYLINT) cliff
 
 test:
-	python setup.py test
+	python3 setup.py test
 
 build-release:
 	find . -name '.DS_Store' -type f -delete
-	python setup.py sdist
+	python3 setup.py sdist
 
 release-test:
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*

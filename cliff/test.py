@@ -23,6 +23,7 @@ class BasicCliffTest(unittest.TestCase):
     def test_parse_text(self):
         results = self._cliff.parse_text("This is about Einstien at the IIT in New Delhi.")
         results = results['results']
+        print(results)
         self.assertEqual(len(results['organizations']), 1)
         self.assertEqual(len(results['places']['mentions']), 1)
         self.assertEqual(results['places']['mentions'][0]['id'], 1261481)
